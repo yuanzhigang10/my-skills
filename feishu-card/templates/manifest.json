@@ -1,0 +1,91 @@
+{
+  "templates": {
+    "notification": {
+      "file": "notification.json",
+      "category": "general",
+      "required": ["TITLE", "SUBTITLE", "LEAD_TEXT", "MESSAGE", "OWNER", "TIME", "SOURCE", "STATUS"],
+      "optional": ["ACTION_TEXT", "ACTION_URL", "MESSAGE_ID"],
+      "url": ["ACTION_URL"],
+      "markdown": ["LEAD_TEXT", "MESSAGE"],
+      "max_length": {
+        "TITLE": 80,
+        "SUBTITLE": 120,
+        "MESSAGE": 900
+      }
+    },
+    "success-report": {
+      "file": "success-report.json",
+      "category": "delivery",
+      "required": ["REPORT_TITLE", "REPORT_SUBTITLE", "COMPLETED_ITEM", "SUMMARY", "RESULT"],
+      "optional": ["DURATION", "PASSED_COUNT", "SKIPPED_COUNT", "NOTE_1", "NOTE_2", "NOTE_3", "DETAIL_BUTTON_TEXT", "DETAIL_URL", "GENERATED_AT", "SOURCE"],
+      "url": ["DETAIL_URL"],
+      "markdown": ["SUMMARY", "NOTE_1", "NOTE_2", "NOTE_3"],
+      "max_length": {
+        "REPORT_TITLE": 80,
+        "SUMMARY": 900
+      }
+    },
+    "alert": {
+      "file": "alert.json",
+      "category": "ops",
+      "required": ["ALERT_TITLE", "SEVERITY", "IMPACT", "DESCRIPTION", "SERVICE", "START_TIME", "RECOMMENDED_ACTION"],
+      "optional": ["ALERT_SUBTITLE", "REGION", "ONCALL", "ACK_TEXT", "ACK_URL", "RUNBOOK_TEXT", "RUNBOOK_URL", "ALERT_ID", "UPDATED_AT"],
+      "url": ["ACK_URL", "RUNBOOK_URL"],
+      "markdown": ["IMPACT", "DESCRIPTION", "RECOMMENDED_ACTION"],
+      "max_length": {
+        "ALERT_TITLE": 80,
+        "DESCRIPTION": 900,
+        "RECOMMENDED_ACTION": 600
+      }
+    },
+    "approval": {
+      "file": "approval.json",
+      "category": "workflow",
+      "required": ["APPROVAL_TITLE", "REQUESTER_USER_ID", "REQUEST_SUMMARY", "REQUEST_TYPE", "PRIORITY", "SUBMITTED_AT", "REQUEST_REASON"],
+      "optional": ["APPROVAL_SUBTITLE", "DUE_AT", "SCOPE", "RISK_NOTE", "ATTACHMENT_NAME", "ATTACHMENT_URL", "APPROVE_TEXT", "APPROVE_URL", "REJECT_TEXT", "REJECT_URL", "OPEN_TEXT", "APPROVAL_URL"],
+      "url": ["ATTACHMENT_URL", "APPROVE_URL", "REJECT_URL", "APPROVAL_URL"],
+      "user_id": ["REQUESTER_USER_ID"],
+      "markdown": ["REQUEST_SUMMARY", "REQUEST_REASON", "RISK_NOTE"],
+      "max_length": {
+        "APPROVAL_TITLE": 80,
+        "REQUEST_SUMMARY": 600,
+        "REQUEST_REASON": 600
+      }
+    },
+    "data-dashboard": {
+      "file": "data-dashboard.json",
+      "category": "data",
+      "required": ["DASHBOARD_TITLE", "DASHBOARD_SUBTITLE", "PERIOD", "TOP_INSIGHT"],
+      "optional": ["REPORT_TEXT", "REPORT_URL", "DASHBOARD_URL", "METRIC_1_LABEL", "METRIC_1_VALUE", "METRIC_2_LABEL", "METRIC_2_VALUE", "METRIC_3_LABEL", "METRIC_3_VALUE", "METRIC_4_LABEL", "METRIC_4_VALUE"],
+      "url": ["REPORT_URL", "DASHBOARD_URL"],
+      "markdown": ["TOP_INSIGHT", "ROW_1_NOTE", "ROW_2_NOTE", "ROW_3_NOTE"],
+      "max_length": {
+        "DASHBOARD_TITLE": 80,
+        "TOP_INSIGHT": 500
+      }
+    },
+    "bot-answer": {
+      "file": "bot-answer.json",
+      "category": "ai",
+      "required": ["TOPIC", "QUESTION", "SUMMARY", "SHORT_ANSWER", "PRIMARY_ANSWER", "CONFIDENCE", "NEXT_STEP", "DOC_URL", "DOC_TITLE"],
+      "optional": ["ANSWER_TYPE", "SECONDARY_ANSWER", "DOMAIN_TAG", "CONFIDENCE_TAG", "PRIMARY_LABEL", "SECONDARY_LABEL", "NEXT_STEP_LABEL", "DOC_LABEL", "DOC_BUTTON_TEXT", "SIDE_PANEL_URL", "SIDE_PANEL_BUTTON_TEXT", "SCENE_LABEL", "ANSWER_LABEL", "EVIDENCE_LABEL", "RISK_LABEL", "SCENE_1", "ANSWER_1", "EVIDENCE_1", "RISK_1", "REASONING_TITLE", "REASONING", "STEPS_TITLE", "TROUBLESHOOTING_STEPS", "FOLLOW_UP_1_TEXT", "FOLLOW_UP_1_PROMPT", "FOLLOW_UP_2_TEXT", "FOLLOW_UP_2_PROMPT", "FOLLOW_UP_3_TEXT", "FOLLOW_UP_3_PROMPT", "FOLLOW_UP_INPUT_PLACEHOLDER", "FOLLOW_UP_SUBMIT_TEXT", "FOOTER", "DOC_CREATED_AS"],
+      "url": ["DOC_URL", "SIDE_PANEL_URL"],
+      "markdown": ["SHORT_ANSWER", "PRIMARY_ANSWER", "SECONDARY_ANSWER", "REASONING", "TROUBLESHOOTING_STEPS"],
+      "max_length": {
+        "TOPIC": 80,
+        "QUESTION": 120,
+        "SHORT_ANSWER": 240,
+        "REASONING": 1200
+      }
+    }
+  },
+  "rules": {
+    "placeholder_pattern": "__[A-Z0-9_]+__",
+    "max_card_bytes": 30720,
+    "max_elements": 200,
+    "max_visible_buttons": 3,
+    "required_top_level": ["schema", "config", "body"],
+    "forbidden_top_level": ["elements", "action", "note", "wide_screen_mode", "compact_width", "i18n_elements"],
+    "bot_troubleshooting_required_links": ["card_link", "markdown_doc_link", "open_doc_button"]
+  }
+}

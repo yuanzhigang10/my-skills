@@ -1,0 +1,120 @@
+{
+  "schema": "2.0",
+  "config": {
+    "update_multi": true,
+    "enable_forward": true,
+    "width_mode": "fill"
+  },
+  "header": {
+    "template": "green",
+    "title": {
+      "tag": "plain_text",
+      "content": "__REPORT_TITLE__"
+    },
+    "subtitle": {
+      "tag": "plain_text",
+      "content": "__REPORT_SUBTITLE__"
+    },
+    "text_tag_list": [
+      {
+        "tag": "text_tag",
+        "text": {
+          "tag": "plain_text",
+          "content": "Success"
+        },
+        "color": "green"
+      }
+    ]
+  },
+  "body": {
+    "direction": "vertical",
+    "vertical_spacing": "medium",
+    "elements": [
+      {
+        "tag": "markdown",
+        "content": "**Completed:** __COMPLETED_ITEM__\n\n__SUMMARY__"
+      },
+      {
+        "tag": "hr"
+      },
+      {
+        "tag": "div",
+        "fields": [
+          {
+            "is_short": true,
+            "text": {
+              "tag": "lark_md",
+              "content": "**Result**\n<font color='green'>__RESULT__</font>"
+            }
+          },
+          {
+            "is_short": true,
+            "text": {
+              "tag": "lark_md",
+              "content": "**Duration**\n__DURATION__"
+            }
+          },
+          {
+            "is_short": true,
+            "text": {
+              "tag": "lark_md",
+              "content": "**Passed**\n__PASSED_COUNT__"
+            }
+          },
+          {
+            "is_short": true,
+            "text": {
+              "tag": "lark_md",
+              "content": "**Skipped**\n__SKIPPED_COUNT__"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "collapsible_panel",
+        "expanded": false,
+        "header": {
+          "title": {
+            "tag": "markdown",
+            "content": "**Run notes**"
+          },
+          "background_color": "grey",
+          "padding": "4px 8px 4px 8px",
+          "icon": {
+            "tag": "standard_icon",
+            "token": "down-small-ccm_outlined",
+            "size": "16px 16px"
+          },
+          "icon_position": "right",
+          "icon_expanded_angle": -180
+        },
+        "elements": [
+          {
+            "tag": "markdown",
+            "content": "- __NOTE_1__\n- __NOTE_2__\n- __NOTE_3__"
+          }
+        ]
+      },
+      {
+        "tag": "button",
+        "text": {
+          "tag": "plain_text",
+          "content": "__DETAIL_BUTTON_TEXT__"
+        },
+        "type": "primary",
+        "width": "default",
+        "behaviors": [
+          {
+            "type": "open_url",
+            "default_url": "__DETAIL_URL__"
+          }
+        ]
+      },
+      {
+        "tag": "markdown",
+        "text_size": "notation",
+        "content": "<font color='grey'>Generated at __GENERATED_AT__ by __SOURCE__</font>"
+      }
+    ]
+  }
+}

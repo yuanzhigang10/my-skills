@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "44d4c6a1-61db-4fad-8df7-65508674a534",
+  "path": "feishu-task",
+  "path_key": "feishu-task",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "import",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}

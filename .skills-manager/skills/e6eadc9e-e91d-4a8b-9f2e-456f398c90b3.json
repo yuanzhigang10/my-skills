@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "e6eadc9e-e91d-4a8b-9f2e-456f398c90b3",
+  "path": "feishu-auth",
+  "path_key": "feishu-auth",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "import",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}

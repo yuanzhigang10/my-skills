@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "79289d17-dcdc-433e-bea0-ad40306b9156",
+  "path": "magic-page",
+  "path_key": "magic-page",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "import",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "00e15959-1f3f-4624-b2db-48c3a4d839f1",
+  "path": "microsoft-foundry",
+  "path_key": "microsoft-foundry",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "import",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}

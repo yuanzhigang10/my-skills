@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "53f716c5-b70f-4096-b3db-1358ecd7e11e",
+  "path": "feishu-whiteboard",
+  "path_key": "feishu-whiteboard",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "import",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}

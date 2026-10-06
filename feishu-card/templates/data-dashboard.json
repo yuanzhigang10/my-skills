@@ -1,0 +1,243 @@
+{
+  "schema": "2.0",
+  "config": {
+    "update_multi": true,
+    "enable_forward": true,
+    "width_mode": "fill"
+  },
+  "header": {
+    "template": "purple",
+    "title": {
+      "tag": "plain_text",
+      "content": "__DASHBOARD_TITLE__"
+    },
+    "subtitle": {
+      "tag": "plain_text",
+      "content": "__DASHBOARD_SUBTITLE__"
+    },
+    "text_tag_list": [
+      {
+        "tag": "text_tag",
+        "text": {
+          "tag": "plain_text",
+          "content": "__PERIOD__"
+        },
+        "color": "purple"
+      }
+    ]
+  },
+  "body": {
+    "direction": "vertical",
+    "vertical_spacing": "medium",
+    "elements": [
+      {
+        "tag": "markdown",
+        "content": "**Top insight:** __TOP_INSIGHT__"
+      },
+      {
+        "tag": "hr"
+      },
+      {
+        "tag": "div",
+        "fields": [
+          {
+            "is_short": true,
+            "text": {
+              "tag": "lark_md",
+              "content": "**__METRIC_1_LABEL__**\n<font color='green'>__METRIC_1_VALUE__</font>\n<font color='grey'>__METRIC_1_DELTA__</font>"
+            }
+          },
+          {
+            "is_short": true,
+            "text": {
+              "tag": "lark_md",
+              "content": "**__METRIC_2_LABEL__**\n__METRIC_2_VALUE__\n<font color='grey'>__METRIC_2_DELTA__</font>"
+            }
+          },
+          {
+            "is_short": true,
+            "text": {
+              "tag": "lark_md",
+              "content": "**__METRIC_3_LABEL__**\n__METRIC_3_VALUE__\n<font color='grey'>__METRIC_3_DELTA__</font>"
+            }
+          },
+          {
+            "is_short": true,
+            "text": {
+              "tag": "lark_md",
+              "content": "**__METRIC_4_LABEL__**\n<font color='red'>__METRIC_4_VALUE__</font>\n<font color='grey'>__METRIC_4_DELTA__</font>"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "column_set",
+        "flex_mode": "bisect",
+        "horizontal_spacing": "8px",
+        "columns": [
+          {
+            "tag": "column",
+            "width": "weighted",
+            "weight": 1,
+            "elements": [
+              {
+                "tag": "markdown",
+                "content": "**__BAR_CHART_TITLE__**"
+              },
+              {
+                "tag": "chart",
+                "aspect_ratio": "1:1",
+                "chart_spec": {
+                  "type": "bar",
+                  "data": {
+                    "values": [
+                      {
+                        "name": "__BAR_NAME_1__",
+                        "value": 0
+                      },
+                      {
+                        "name": "__BAR_NAME_2__",
+                        "value": 0
+                      },
+                      {
+                        "name": "__BAR_NAME_3__",
+                        "value": 0
+                      }
+                    ]
+                  },
+                  "xField": "name",
+                  "yField": "value",
+                  "label": {
+                    "visible": true
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "tag": "column",
+            "width": "weighted",
+            "weight": 1,
+            "elements": [
+              {
+                "tag": "markdown",
+                "content": "**__PIE_CHART_TITLE__**"
+              },
+              {
+                "tag": "chart",
+                "aspect_ratio": "1:1",
+                "chart_spec": {
+                  "type": "pie",
+                  "data": {
+                    "values": [
+                      {
+                        "name": "__PIE_NAME_1__",
+                        "value": 0
+                      },
+                      {
+                        "name": "__PIE_NAME_2__",
+                        "value": 0
+                      },
+                      {
+                        "name": "__PIE_NAME_3__",
+                        "value": 0
+                      }
+                    ]
+                  },
+                  "categoryField": "name",
+                  "valueField": "value",
+                  "label": {
+                    "visible": true
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "collapsible_panel",
+        "expanded": false,
+        "header": {
+          "title": {
+            "tag": "markdown",
+            "content": "**Detail rows**"
+          },
+          "background_color": "grey",
+          "padding": "4px 8px 4px 8px",
+          "icon": {
+            "tag": "standard_icon",
+            "token": "down-small-ccm_outlined",
+            "size": "16px 16px"
+          },
+          "icon_position": "right",
+          "icon_expanded_angle": -180
+        },
+        "elements": [
+          {
+            "tag": "markdown",
+            "content": "| Item | Value | Note |\n| --- | --- | --- |\n| __ROW_1_NAME__ | __ROW_1_VALUE__ | __ROW_1_NOTE__ |\n| __ROW_2_NAME__ | __ROW_2_VALUE__ | __ROW_2_NOTE__ |\n| __ROW_3_NAME__ | __ROW_3_VALUE__ | __ROW_3_NOTE__ |"
+          }
+        ]
+      },
+      {
+        "tag": "column_set",
+        "flex_mode": "none",
+        "horizontal_spacing": "8px",
+        "columns": [
+          {
+            "tag": "column",
+            "width": "weighted",
+            "weight": 1,
+            "vertical_align": "center",
+            "elements": [
+              {
+                "tag": "button",
+                "text": {
+                  "tag": "plain_text",
+                  "content": "__REPORT_TEXT__"
+                },
+                "type": "primary",
+                "width": "fill",
+                "behaviors": [
+                  {
+                    "type": "open_url",
+                    "default_url": "__REPORT_URL__"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "column",
+            "width": "weighted",
+            "weight": 1,
+            "vertical_align": "center",
+            "elements": [
+              {
+                "tag": "button",
+                "text": {
+                  "tag": "plain_text",
+                  "content": "__EXPORT_TEXT__"
+                },
+                "type": "default",
+                "width": "fill",
+                "behaviors": [
+                  {
+                    "type": "open_url",
+                    "default_url": "__EXPORT_URL__"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "markdown",
+        "text_size": "notation",
+        "content": "<font color='grey'>Updated at __UPDATED_AT__ | Dataset: __DATASET__</font>"
+      }
+    ]
+  }
+}

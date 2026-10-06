@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "f2234a97-f584-4e46-8a52-551e98d337d2",
+  "path": "feishu-create-doc",
+  "path_key": "feishu-create-doc",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "import",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}

@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 680" font-family="Noto Sans SC, -apple-system, sans-serif">
+  <rect width="1240" height="680" fill="#fafbfc"/>
+
+  <!-- Title -->
+  <text x="620" y="44" text-anchor="middle" font-size="22" font-weight="700" fill="#1f2937">治理路线图 · 6 周到 3 个月</text>
+  <text x="620" y="66" text-anchor="middle" font-size="13" fill="#6b7280">从 0 数据到 ROI 闭环 · 三阶段 6 里程碑 · 路径关键依赖明确</text>
+
+  <!-- Phase legend -->
+  <g transform="translate(40,92)">
+    <rect width="14" height="14" fill="#3b82f6"/>
+    <text x="22" y="12" font-size="11" fill="#374151">阶段 1 · 埋点</text>
+    <rect x="120" width="14" height="14" fill="#10b981"/>
+    <text x="142" y="12" font-size="11" fill="#374151">阶段 2 · 度量</text>
+    <rect x="240" width="14" height="14" fill="#a855f7"/>
+    <text x="262" y="12" font-size="11" fill="#374151">阶段 3 · ROI 反推</text>
+    <text x="380" y="12" font-size="11" fill="#9ca3af">·</text>
+    <text x="400" y="12" font-size="11" fill="#6b7280" font-style="italic">小方块 = 关键里程碑 · 箭头 = 阻塞依赖</text>
+  </g>
+
+  <!-- Timeline axis -->
+  <line x1="80" y1="360" x2="1180" y2="360" stroke="#1f2937" stroke-width="2"/>
+
+  <!-- Tick marks -->
+  <g font-family="JetBrains Mono, monospace" font-size="11" fill="#1f2937" font-weight="600">
+    <line x1="160" y1="356" x2="160" y2="364" stroke="#1f2937" stroke-width="2"/>
+    <text x="160" y="386" text-anchor="middle">W1</text>
+    <line x1="320" y1="356" x2="320" y2="364" stroke="#1f2937" stroke-width="2"/>
+    <text x="320" y="386" text-anchor="middle">W2</text>
+    <line x1="480" y1="356" x2="480" y2="364" stroke="#1f2937" stroke-width="2"/>
+    <text x="480" y="386" text-anchor="middle">W3</text>
+    <line x1="640" y1="356" x2="640" y2="364" stroke="#1f2937" stroke-width="2"/>
+    <text x="640" y="386" text-anchor="middle">W4</text>
+    <line x1="800" y1="356" x2="800" y2="364" stroke="#1f2937" stroke-width="2"/>
+    <text x="800" y="386" text-anchor="middle">M2</text>
+    <line x1="960" y1="356" x2="960" y2="364" stroke="#1f2937" stroke-width="2"/>
+    <text x="960" y="386" text-anchor="middle">M3</text>
+    <line x1="1120" y1="356" x2="1120" y2="364" stroke="#1f2937" stroke-width="2"/>
+    <text x="1120" y="386" text-anchor="middle" fill="#10b981">闭环</text>
+  </g>
+
+  <!-- Phase 1 band (W1-W3) - blue -->
+  <rect x="80" y="408" width="400" height="40" rx="4" fill="#3b82f6" opacity="0.15"/>
+  <text x="280" y="432" text-anchor="middle" font-size="12" fill="#1e40af" font-weight="600" letter-spacing="2">阶段 1 · 埋点 (W1 - W3)</text>
+
+  <!-- Phase 2 band (W4-M2) - green -->
+  <rect x="480" y="408" width="320" height="40" rx="4" fill="#10b981" opacity="0.15"/>
+  <text x="640" y="432" text-anchor="middle" font-size="12" fill="#065f46" font-weight="600" letter-spacing="2">阶段 2 · 度量 (W4 - M2)</text>
+
+  <!-- Phase 3 band (M2-M3) - purple -->
+  <rect x="800" y="408" width="380" height="40" rx="4" fill="#a855f7" opacity="0.15"/>
+  <text x="990" y="432" text-anchor="middle" font-size="12" fill="#6b21a8" font-weight="600" letter-spacing="2">阶段 3 · ROI 反推 (M2 - M3)</text>
+
+  <!-- Milestone 1 (W1) - above timeline -->
+  <line x1="160" y1="360" x2="160" y2="280" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <rect x="80" y="140" width="180" height="138" rx="6" fill="#fff" stroke="#3b82f6" stroke-width="1.5"/>
+  <rect x="80" y="140" width="180" height="22" fill="#3b82f6"/>
+  <text x="170" y="156" text-anchor="middle" font-size="11" fill="#fff" font-weight="600" letter-spacing="1">M1 · 埋点 SDK</text>
+  <text x="92" y="178" font-size="10" fill="#1e40af" font-weight="600">交付物</text>
+  <text x="92" y="194" font-size="10" fill="#1f2937">telemetry-base plugin</text>
+  <text x="92" y="207" font-size="10" fill="#1f2937">record.sh / flush.sh</text>
+  <text x="92" y="226" font-size="10" fill="#1e40af" font-weight="600">技术接入</text>
+  <text x="92" y="242" font-size="9" fill="#1f2937" font-family="JetBrains Mono, monospace">Pre/PostToolUse hook</text>
+  <text x="92" y="254" font-size="9" fill="#1f2937" font-family="JetBrains Mono, monospace">+ SessionStart + Stop</text>
+  <text x="92" y="270" font-size="10" fill="#6b7280" font-style="italic">@infra owner</text>
+
+  <!-- Milestone 2 (W2) -->
+  <line x1="320" y1="360" x2="320" y2="280" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <rect x="240" y="140" width="180" height="138" rx="6" fill="#fff" stroke="#3b82f6" stroke-width="1.5"/>
+  <rect x="240" y="140" width="180" height="22" fill="#3b82f6"/>
+  <text x="330" y="156" text-anchor="middle" font-size="11" fill="#fff" font-weight="600" letter-spacing="1">M2 · 一键安装</text>
+  <text x="252" y="178" font-size="10" fill="#1e40af" font-weight="600">交付物</text>
+  <text x="252" y="194" font-size="10" fill="#1f2937">公司级安装脚本</text>
+  <text x="252" y="207" font-size="10" fill="#1f2937">默认包含 telemetry</text>
+  <text x="252" y="226" font-size="10" fill="#1e40af" font-weight="600">数据流</text>
+  <text x="252" y="242" font-size="9.5" fill="#1f2937">jsonl → Aeolus 接通</text>
+  <text x="252" y="270" font-size="10" fill="#6b7280" font-style="italic">@infra owner</text>
+
+  <!-- Milestone 3 (W3) -->
+  <line x1="480" y1="360" x2="480" y2="280" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <rect x="400" y="140" width="180" height="138" rx="6" fill="#fff" stroke="#3b82f6" stroke-width="1.5"/>
+  <rect x="400" y="140" width="180" height="22" fill="#3b82f6"/>
+  <text x="490" y="156" text-anchor="middle" font-size="11" fill="#fff" font-weight="600" letter-spacing="1">M3 · 首份 dashboard</text>
+  <text x="412" y="178" font-size="10" fill="#1e40af" font-weight="600">交付物</text>
+  <text x="412" y="194" font-size="10" fill="#1f2937">Aeolus dashboard v0</text>
+  <text x="412" y="207" font-size="10" fill="#1f2937">top10 / bottom10</text>
+  <text x="412" y="226" font-size="10" fill="#1e40af" font-weight="600">指标</text>
+  <text x="412" y="242" font-size="9.5" fill="#1f2937">加载 / 调用 / 召回粗</text>
+  <text x="412" y="254" font-size="9.5" fill="#1f2937">完成率 (P0 四件)</text>
+  <text x="412" y="270" font-size="10" fill="#6b7280" font-style="italic">@analyst owner</text>
+
+  <!-- Milestone 4 (W4) -->
+  <line x1="640" y1="360" x2="640" y2="280" stroke="#10b981" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <rect x="560" y="140" width="180" height="138" rx="6" fill="#fff" stroke="#10b981" stroke-width="1.5"/>
+  <rect x="560" y="140" width="180" height="22" fill="#10b981"/>
+  <text x="650" y="156" text-anchor="middle" font-size="11" fill="#fff" font-weight="600" letter-spacing="1">M4 · 30 天 baseline</text>
+  <text x="572" y="178" font-size="10" fill="#065f46" font-weight="600">交付物</text>
+  <text x="572" y="194" font-size="10" fill="#1f2937">30 天调用基线</text>
+  <text x="572" y="207" font-size="10" fill="#1f2937">耗时 P50/P95</text>
+  <text x="572" y="226" font-size="10" fill="#065f46" font-weight="600">新指标</text>
+  <text x="572" y="242" font-size="9.5" fill="#1f2937">平均耗时 + 出错率</text>
+  <text x="572" y="254" font-size="9.5" fill="#1f2937">(P1 两件)</text>
+  <text x="572" y="270" font-size="10" fill="#6b7280" font-style="italic">@analyst owner</text>
+
+  <!-- Milestone 5 (M2) -->
+  <line x1="800" y1="360" x2="800" y2="280" stroke="#a855f7" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <rect x="720" y="140" width="180" height="138" rx="6" fill="#fff" stroke="#a855f7" stroke-width="1.5"/>
+  <rect x="720" y="140" width="180" height="22" fill="#a855f7"/>
+  <text x="810" y="156" text-anchor="middle" font-size="11" fill="#fff" font-weight="600" letter-spacing="1">M5 · 离线 recall 评测</text>
+  <text x="732" y="178" font-size="10" fill="#6b21a8" font-weight="600">交付物</text>
+  <text x="732" y="194" font-size="10" fill="#1f2937">100 条 ground truth</text>
+  <text x="732" y="207" font-size="10" fill="#1f2937">batch 跑 + recall@K</text>
+  <text x="732" y="226" font-size="10" fill="#6b21a8" font-weight="600">用途</text>
+  <text x="732" y="242" font-size="9.5" fill="#1f2937">改 description 闭环</text>
+  <text x="732" y="254" font-size="9.5" fill="#1f2937">每季度跑 1 次</text>
+  <text x="732" y="270" font-size="10" fill="#6b7280" font-style="italic">@skill owner</text>
+
+  <!-- Milestone 6 (M3) -->
+  <line x1="960" y1="360" x2="960" y2="280" stroke="#a855f7" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <rect x="880" y="140" width="180" height="138" rx="6" fill="#fff" stroke="#a855f7" stroke-width="1.5"/>
+  <rect x="880" y="140" width="180" height="22" fill="#a855f7"/>
+  <text x="970" y="156" text-anchor="middle" font-size="11" fill="#fff" font-weight="600" letter-spacing="1">M6 · 回填"效果"列</text>
+  <text x="892" y="178" font-size="10" fill="#6b21a8" font-weight="600">交付物</text>
+  <text x="892" y="194" font-size="10" fill="#1f2937">每 skill 真实数据</text>
+  <text x="892" y="207" font-size="10" fill="#1f2937">人日省 / ROI</text>
+  <text x="892" y="226" font-size="10" fill="#6b21a8" font-weight="600">回写</text>
+  <text x="892" y="242" font-size="9.5" fill="#1f2937">回到这份 SEA Skills</text>
+  <text x="892" y="254" font-size="9.5" fill="#1f2937">梳理文档 v2</text>
+  <text x="892" y="270" font-size="10" fill="#6b7280" font-style="italic">@all owners</text>
+
+  <!-- End state badge -->
+  <line x1="1120" y1="360" x2="1120" y2="280" stroke="#10b981" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <rect x="1080" y="180" width="120" height="98" rx="8" fill="#065f46"/>
+  <text x="1140" y="208" text-anchor="middle" font-size="11" fill="#a7f3d0" letter-spacing="1.5">END STATE</text>
+  <text x="1140" y="234" text-anchor="middle" font-size="14" fill="#fff" font-weight="700">治理</text>
+  <text x="1140" y="252" text-anchor="middle" font-size="14" fill="#fff" font-weight="700">闭环</text>
+  <text x="1140" y="272" text-anchor="middle" font-size="9.5" fill="#a7f3d0">86 skill 全可见</text>
+
+  <!-- Below timeline: dependency arrows -->
+  <text x="80" y="478" font-size="11" font-weight="600" fill="#1f2937" letter-spacing="1.5">DEPENDENCY CHAIN</text>
+
+  <!-- Horizontal arrow chain showing dependencies -->
+  
+    <rect x="80" y="492" width="200" height="44" rx="4" fill="#dbeafe" stroke="#3b82f6"/>
+    <text font-size="10" x="180" y="510" text-anchor="middle" font-weight="600" fill="#1e40af">M1 + M2 必须先做</text>
+    <text font-size="10" x="180" y="525" text-anchor="middle" fill="#1f2937">没埋点就没数据</text>
+
+    <line x1="280" y1="514" x2="304" y2="514" stroke="#1f2937" stroke-width="1.5"/>
+    <polygon points="300,510 310,514 300,518" fill="#1f2937"/>
+
+    <rect x="312" y="492" width="200" height="44" rx="4" fill="#d1fae5" stroke="#10b981"/>
+    <text font-size="10" x="412" y="510" text-anchor="middle" font-weight="600" fill="#065f46">M3 + M4 才能算度量</text>
+    <text font-size="10" x="412" y="525" text-anchor="middle" fill="#1f2937">数据要有 30 天累计</text>
+
+    <line x1="512" y1="514" x2="536" y2="514" stroke="#1f2937" stroke-width="1.5"/>
+    <polygon points="532,510 542,514 532,518" fill="#1f2937"/>
+
+    <rect x="544" y="492" width="200" height="44" rx="4" fill="#f3e8ff" stroke="#a855f7"/>
+    <text font-size="10" x="644" y="510" text-anchor="middle" font-weight="600" fill="#6b21a8">M5 + M6 才有 ROI</text>
+    <text font-size="10" x="644" y="525" text-anchor="middle" fill="#1f2937">召回 + 节省时长</text>
+
+    <line x1="744" y1="514" x2="768" y2="514" stroke="#1f2937" stroke-width="1.5"/>
+    <polygon points="764,510 774,514 764,518" fill="#1f2937"/>
+
+    <rect x="776" y="492" width="280" height="44" rx="4" fill="#1f2937" stroke="#1f2937"/>
+    <text font-size="10" x="916" y="510" text-anchor="middle" font-weight="600" fill="#fff">回填 SEA Skills 文档"效果"列</text>
+    <text font-size="10" x="916" y="525" text-anchor="middle" fill="#94a3b8">老板可看 · v2 形成"AI Native 实证"叙事</text>
+  
+
+  <!-- Footer: 3 hard rules -->
+  <line x1="40" y1="572" x2="1200" y2="572" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="2,2"/>
+  <text x="40" y="600" font-size="11" font-weight="600" fill="#1f2937">3 条治理硬规则</text>
+
+  <rect x="40" y="612" width="380" height="50" rx="4" fill="#fef3c7" stroke="#d4a72c"/>
+  <text x="56" y="630" font-size="11" font-weight="600" fill="#92400e">① 不每个 plugin 自己埋点</text>
+  <text x="56" y="646" font-size="10" fill="#1f2937">全局 1 个 telemetry-base plugin，零侵入接入 86 个 skill</text>
+  <text x="56" y="658" font-size="10" fill="#374151">注入 settings.json hook · 现有 skill 不动</text>
+
+  <rect x="430" y="612" width="380" height="50" rx="4" fill="#fef3c7" stroke="#d4a72c"/>
+  <text x="446" y="630" font-size="11" font-weight="600" fill="#92400e">② 数据脱敏 · 不传 prompt</text>
+  <text x="446" y="646" font-size="10" fill="#1f2937">只传 skill_id / ts / duration / ok 元数据</text>
+  <text x="446" y="658" font-size="10" fill="#374151">合规可控 · 公司基建审核通过</text>
+
+  <rect x="820" y="612" width="380" height="50" rx="4" fill="#fef3c7" stroke="#d4a72c"/>
+  <text x="836" y="630" font-size="11" font-weight="600" fill="#92400e">③ 失败重试 · 本地 jsonl 缓冲</text>
+  <text x="836" y="646" font-size="10" fill="#1f2937">cron 上传 · 断网不丢数据</text>
+  <text x="836" y="658" font-size="10" fill="#374151">用户透明 · 网络故障对体验零影响</text>
+</svg>

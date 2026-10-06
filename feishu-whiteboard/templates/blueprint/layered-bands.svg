@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 920" font-family="Noto Sans SC, -apple-system, sans-serif">
+  <rect width="1180" height="920" fill="#fafbfc"/>
+
+  <!-- Title -->
+  <text x="590" y="44" text-anchor="middle" font-size="24" font-weight="700" fill="#1f2937">Skill 分类架构封层 · 9 动作 / 4 层封装</text>
+  <text x="590" y="68" text-anchor="middle" font-size="13" fill="#6b7280">动词驱动的 MECE 分类 · 每个动作有唯一时序位置、唯一输出物、唯一专业角色</text>
+
+  <!-- Legend at top right -->
+  <g transform="translate(40,98)">
+    <text x="0" y="11" font-size="10" fill="#6b7280" font-weight="600" letter-spacing="1.5">READING ORDER</text>
+    <text x="135" y="11" font-size="10" fill="#374151">① 编排层 ↓ ② 上下文层 ↓ ③ 流程主轴 ↓ ④ 横切层　·　箭头表示数据流向</text>
+  </g>
+
+  <!-- ============== LAYER 1 · 编排层 ============== -->
+  <rect x="40" y="120" width="1100" height="100" rx="8" fill="#f6fcf6" stroke="#84c184" stroke-width="2"/>
+  <!-- Number circle -->
+  <circle cx="92" cy="170" r="28" fill="#3a8a3a"/>
+  <text x="92" y="178" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">①</text>
+  <!-- Layer title -->
+  <text x="140" y="156" font-size="15" font-weight="700" fill="#1f2937">编排层 · Routing</text>
+  <text x="140" y="172" font-size="11" fill="#3a8a3a" font-weight="500">Triage · 路由分流</text>
+  <text x="140" y="190" font-size="10.5" fill="#374151">流程入口 · 决定下游 skill 是否被自动加载</text>
+  <text x="140" y="205" font-size="10" fill="#6b7280" font-style="italic">唯一时序位置：流程最上游 · 唯一输出物：子 skill 加载决策 · 唯一角色：分诊 agent</text>
+  <!-- Inline skill examples -->
+  <rect x="640" y="138" width="220" height="64" rx="6" fill="#fff" stroke="#84c184"/>
+  <text x="654" y="156" font-size="10" fill="#3a8a3a" font-weight="600" letter-spacing="0.5">REPRESENTATIVE SKILLS</text>
+  <text x="654" y="173" font-size="11" fill="#1f2937" font-family="JetBrains Mono, monospace">promotion-analyzing</text>
+  <text x="654" y="188" font-size="11" fill="#1f2937" font-family="JetBrains Mono, monospace">content-analyzing · pdp-analyzing</text>
+  <text x="654" y="200" font-size="10" fill="#9ca3af" font-family="JetBrains Mono, monospace">activity-e2e · environment-setup</text>
+  <rect x="880" y="138" width="220" height="64" rx="6" fill="#fff" stroke="#84c184"/>
+  <text x="894" y="156" font-size="10" fill="#3a8a3a" font-weight="600" letter-spacing="0.5">COVERAGE</text>
+  <text x="894" y="178" font-size="20" fill="#1f2937" font-weight="700">5</text>
+  <text x="922" y="178" font-size="11" fill="#6b7280">个 skill</text>
+  <text x="894" y="196" font-size="10" fill="#9ca3af">营销·内容·PDP·互动·商城✗</text>
+
+  <!-- Arrow from L1 to L2 -->
+  <line x1="590" y1="220" x2="590" y2="248" stroke="#9ca3af" stroke-width="1.5"/>
+  <polygon points="585,244 590,254 595,244" fill="#9ca3af"/>
+  <text x="600" y="240" font-size="10" fill="#6b7280">load context</text>
+
+  <!-- ============== LAYER 2 · 上下文层 ============== -->
+  <rect x="40" y="252" width="1100" height="100" rx="8" fill="#fef9f7" stroke="#e89890" stroke-width="2"/>
+  <circle cx="92" cy="302" r="28" fill="#c75050"/>
+  <text x="92" y="310" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">②</text>
+  <text x="140" y="288" font-size="15" font-weight="700" fill="#1f2937">上下文层 · Context-Load</text>
+  <text x="140" y="304" font-size="11" fill="#c75050" font-weight="500">按需加载已有代码 / 经验 / 数据，避免 RD/AI 重学</text>
+  <text x="140" y="322" font-size="10.5" fill="#374151">流程任意阶段被调用 · 输入是定位条件，输出是结构化上下文</text>
+  <text x="140" y="337" font-size="10" fill="#6b7280" font-style="italic">合并原 "库索引" + "知识沉淀" + "数据查询" — 它们本质都是 fetch 已有事实</text>
+  <rect x="640" y="270" width="220" height="64" rx="6" fill="#fff" stroke="#e89890"/>
+  <text x="654" y="288" font-size="10" fill="#c75050" font-weight="600" letter-spacing="0.5">REPRESENTATIVE SKILLS</text>
+  <text x="654" y="305" font-size="11" fill="#1f2937" font-family="JetBrains Mono, monospace">gecc-promotion-lib · ec-libs-index</text>
+  <text x="654" y="320" font-size="11" fill="#1f2937" font-family="JetBrains Mono, monospace">ks-aimate / ks-techpedia / ks-local</text>
+  <text x="654" y="332" font-size="10" fill="#9ca3af" font-family="JetBrains Mono, monospace">repo-mapping-from-lark · ai-comp-library</text>
+  <rect x="880" y="270" width="220" height="64" rx="6" fill="#fff" stroke="#e89890"/>
+  <text x="894" y="288" font-size="10" fill="#c75050" font-weight="600" letter-spacing="0.5">COVERAGE</text>
+  <text x="894" y="310" font-size="20" fill="#1f2937" font-weight="700">11</text>
+  <text x="930" y="310" font-size="11" fill="#6b7280">个 skill</text>
+  <text x="894" y="328" font-size="10" fill="#9ca3af">营销 4 · 内容 2 · 服务端 5</text>
+
+  <!-- Arrow from L2 to L3 -->
+  <line x1="590" y1="352" x2="590" y2="380" stroke="#9ca3af" stroke-width="1.5"/>
+  <polygon points="585,376 590,386 595,376" fill="#9ca3af"/>
+  <text x="600" y="372" font-size="10" fill="#6b7280">feed pipeline</text>
+
+  <!-- ============== LAYER 3 · 流程主轴 (TALL) ============== -->
+  <rect x="40" y="384" width="1100" height="350" rx="8" fill="#fefbef" stroke="#d4b850" stroke-width="2"/>
+  <circle cx="92" cy="434" r="28" fill="#a07c20"/>
+  <text x="92" y="442" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">③</text>
+  <text x="140" y="420" font-size="15" font-weight="700" fill="#1f2937">流程主轴 · Pipeline</text>
+  <text x="140" y="436" font-size="11" fill="#a07c20" font-weight="500">PRD → Code → QA · 4 阶段串行 + 2 知识总线并行</text>
+  <text x="140" y="454" font-size="10.5" fill="#374151">每阶段输出物有清晰物理形态 · 知识总线被 Design / Codegen 共享调用</text>
+
+  <!-- Phase axis: 4 horizontal phases -->
+  <text x="80" y="490" font-size="10.5" font-weight="600" fill="#a07c20" letter-spacing="1">PHASE AXIS</text>
+
+  <rect x="80" y="502" width="200" height="78" rx="6" fill="#fff" stroke="#d4b850" stroke-width="1.5"/>
+  <text x="180" y="522" text-anchor="middle" font-size="10" fill="#a07c20" font-weight="600" letter-spacing="0.5">REQUIREMENT · 需求摄入</text>
+  <text x="180" y="546" text-anchor="middle" font-size="14" fill="#1f2937" font-weight="600">Req</text>
+  <text x="180" y="563" text-anchor="middle" font-size="10" fill="#6b7280">输出: user-flow / UX onepager</text>
+  <text x="180" y="575" text-anchor="middle" font-size="9.5" fill="#9ca3af" font-family="JetBrains Mono, monospace">3 skill · 给 PM/UX 评审</text>
+
+  <!-- Phase arrow Req → Design -->
+  <line x1="282" y1="541" x2="306" y2="541" stroke="#a07c20" stroke-width="1.5"/>
+  <polygon points="302,537 312,541 302,545" fill="#a07c20"/>
+
+  <rect x="316" y="502" width="200" height="78" rx="6" fill="#fff" stroke="#d4b850" stroke-width="1.5"/>
+  <text x="416" y="522" text-anchor="middle" font-size="10" fill="#a07c20" font-weight="600" letter-spacing="0.5">DESIGN · 技术设计</text>
+  <text x="416" y="546" text-anchor="middle" font-size="14" fill="#1f2937" font-weight="600">Design</text>
+  <text x="416" y="563" text-anchor="middle" font-size="10" fill="#6b7280">输出: TD 文档 / IDL 契约</text>
+  <text x="416" y="575" text-anchor="middle" font-size="9.5" fill="#9ca3af" font-family="JetBrains Mono, monospace">7 skill · 给 RD 评审</text>
+
+  <!-- Phase arrow Design → Codegen -->
+  <line x1="518" y1="541" x2="542" y2="541" stroke="#a07c20" stroke-width="1.5"/>
+  <polygon points="538,537 548,541 538,545" fill="#a07c20"/>
+
+  <rect x="552" y="502" width="200" height="78" rx="6" fill="#fff" stroke="#d4b850" stroke-width="1.5"/>
+  <text x="652" y="522" text-anchor="middle" font-size="10" fill="#a07c20" font-weight="600" letter-spacing="0.5">CODEGEN · 代码生成</text>
+  <text x="652" y="546" text-anchor="middle" font-size="14" fill="#1f2937" font-weight="600">Codegen</text>
+  <text x="652" y="563" text-anchor="middle" font-size="10" fill="#6b7280">输出: 代码 diff</text>
+  <text x="652" y="575" text-anchor="middle" font-size="9.5" fill="#9ca3af" font-family="JetBrains Mono, monospace">12 skill · 写实际代码</text>
+
+  <!-- Phase arrow Codegen → Verify -->
+  <line x1="754" y1="541" x2="778" y2="541" stroke="#a07c20" stroke-width="1.5"/>
+  <polygon points="774,537 784,541 774,545" fill="#a07c20"/>
+
+  <rect x="788" y="502" width="200" height="78" rx="6" fill="#fff" stroke="#d4b850" stroke-width="1.5"/>
+  <text x="888" y="522" text-anchor="middle" font-size="10" fill="#a07c20" font-weight="600" letter-spacing="0.5">VERIFY+HANDOFF · 自验交付</text>
+  <text x="888" y="546" text-anchor="middle" font-size="14" fill="#1f2937" font-weight="600">Verify</text>
+  <text x="888" y="563" text-anchor="middle" font-size="10" fill="#6b7280">输出: QA handoff / E2E report</text>
+  <text x="888" y="575" text-anchor="middle" font-size="9.5" fill="#9ca3af" font-family="JetBrains Mono, monospace">4 skill · task done 前硬门</text>
+
+  <!-- Output arrow -->
+  <line x1="990" y1="541" x2="1100" y2="541" stroke="#a07c20" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="1096,537 1106,541 1096,545" fill="#a07c20"/>
+  <text x="1100" y="535" font-size="10" fill="#6b7280" text-anchor="end">→ Prod</text>
+
+  <!-- Knowledge bus header -->
+  <text x="80" y="618" font-size="10.5" font-weight="600" fill="#a07c20" letter-spacing="1">KNOWLEDGE BUS · 知识总线（被 Design + Codegen 共享调用）</text>
+
+  <!-- Knowledge bus boxes -->
+  <rect x="80" y="630" width="436" height="86" rx="6" fill="#fff" stroke="#d4b850" stroke-width="1.5"/>
+  <text x="298" y="652" text-anchor="middle" font-size="11" fill="#a07c20" font-weight="600" letter-spacing="0.5">DOMAIN-KB · 业务专家知识</text>
+  <text x="298" y="672" text-anchor="middle" font-size="11" fill="#1f2937" font-family="JetBrains Mono, monospace">lynx · hava · patom · tracking · pdp-action-chain</text>
+  <text x="298" y="688" text-anchor="middle" font-size="10" fill="#6b7280">业务变 → 它要改</text>
+  <text x="298" y="702" text-anchor="middle" font-size="9.5" fill="#9ca3af" font-family="JetBrains Mono, monospace">10 个 skill · 营销 7 + PDP 3</text>
+
+  <rect x="552" y="630" width="436" height="86" rx="6" fill="#fff" stroke="#d4b850" stroke-width="1.5"/>
+  <text x="770" y="652" text-anchor="middle" font-size="11" fill="#a07c20" font-weight="600" letter-spacing="0.5">PLATFORM-KB · 平台 / 基建知识</text>
+  <text x="770" y="672" text-anchor="middle" font-size="11" fill="#1f2937" font-family="JetBrains Mono, monospace">hertz · kitex · kms · libra · middleware-* · metrics</text>
+  <text x="770" y="688" text-anchor="middle" font-size="10" fill="#6b7280">业务变 → 它不改 (公司公共资产)</text>
+  <text x="770" y="702" text-anchor="middle" font-size="9.5" fill="#9ca3af" font-family="JetBrains Mono, monospace">22 个 skill · 服务端基建主战场</text>
+
+  <!-- Consult arrows from KB to Design + Codegen -->
+  <line x1="416" y1="600" x2="298" y2="630" stroke="#d4b850" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="652" y1="600" x2="298" y2="630" stroke="#d4b850" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="416" y1="600" x2="770" y2="630" stroke="#d4b850" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="652" y1="600" x2="770" y2="630" stroke="#d4b850" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="1010" y="660" font-size="9.5" fill="#a07c20" font-style="italic">consulted</text>
+  <text x="1010" y="674" font-size="9.5" fill="#a07c20" font-style="italic">on demand</text>
+
+  <!-- Arrow from L3 to L4 -->
+  <line x1="590" y1="734" x2="590" y2="762" stroke="#9ca3af" stroke-width="1.5"/>
+  <polygon points="585,758 590,768 595,758" fill="#9ca3af"/>
+
+  <!-- ============== LAYER 4 · 横切层 ============== -->
+  <rect x="40" y="766" width="1100" height="100" rx="8" fill="#f6f9fd" stroke="#7e96d4" stroke-width="2"/>
+  <circle cx="92" cy="816" r="28" fill="#4862a8"/>
+  <text x="92" y="824" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">④</text>
+  <text x="140" y="802" font-size="15" font-weight="700" fill="#1f2937">横切层 · Cross-cut</text>
+  <text x="140" y="818" font-size="11" fill="#4862a8" font-weight="500">所有阶段共用的小工具 · Lark / 图表 / 数据查询 / 通用基建</text>
+  <text x="140" y="836" font-size="10.5" fill="#374151">合并原 "Lark 文档" + "辅助工具" — 都是横切的，独立成层</text>
+  <text x="140" y="851" font-size="10" fill="#6b7280" font-style="italic">这些 skill 不属于流程任一阶段，但每阶段都可能调用</text>
+  <rect x="640" y="784" width="220" height="64" rx="6" fill="#fff" stroke="#7e96d4"/>
+  <text x="654" y="802" font-size="10" fill="#4862a8" font-weight="600" letter-spacing="0.5">REPRESENTATIVE SKILLS</text>
+  <text x="654" y="819" font-size="11" fill="#1f2937" font-family="JetBrains Mono, monospace">lark-docs-access · lark-rich-doc</text>
+  <text x="654" y="834" font-size="11" fill="#1f2937" font-family="JetBrains Mono, monospace">diagram-design · lark-docs2md</text>
+  <text x="654" y="846" font-size="10" fill="#9ca3af" font-family="JetBrains Mono, monospace">rds · user_jwt · tcc-query</text>
+  <rect x="880" y="784" width="220" height="64" rx="6" fill="#fff" stroke="#7e96d4"/>
+  <text x="894" y="802" font-size="10" fill="#4862a8" font-weight="600" letter-spacing="0.5">COVERAGE</text>
+  <text x="894" y="824" font-size="20" fill="#1f2937" font-weight="700">7</text>
+  <text x="922" y="824" font-size="11" fill="#6b7280">个 skill</text>
+  <text x="894" y="842" font-size="10" fill="#9ca3af">营销 3 · 服务端 4</text>
+
+  <!-- Footer -->
+  <text x="40" y="894" font-size="10.5" font-weight="600" fill="#1f2937">3 条切割规则（用来回答 reviewer "你为啥这么分"）</text>
+  <text x="40" y="909" font-size="10" fill="#374151">① Domain-KB ≠ Platform-KB · 业务变它改吗？　　② Req ≠ Design · 输出物给谁看？(PM/UX vs RD)　　③ Context-Load 是单独动作 · 是否被"按需加载"</text>
+</svg>

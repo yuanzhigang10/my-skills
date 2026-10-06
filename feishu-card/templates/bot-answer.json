@@ -1,0 +1,364 @@
+{
+  "schema": "2.0",
+  "config": {
+    "update_multi": true,
+    "enable_forward": true,
+    "width_mode": "fill",
+    "summary": {
+      "content": "__SUMMARY__"
+    }
+  },
+  "card_link": {
+    "url": "__DOC_URL__",
+    "pc_url": "__DOC_URL__",
+    "ios_url": "__DOC_URL__",
+    "android_url": "__DOC_URL__"
+  },
+  "header": {
+    "template": "wathet",
+    "title": {
+      "tag": "plain_text",
+      "content": "__TOPIC__"
+    },
+    "subtitle": {
+      "tag": "plain_text",
+      "content": "__QUESTION__"
+    },
+    "text_tag_list": [
+      {
+        "tag": "text_tag",
+        "text": {
+          "tag": "plain_text",
+          "content": "__DOMAIN_TAG__"
+        },
+        "color": "blue"
+      },
+      {
+        "tag": "text_tag",
+        "text": {
+          "tag": "plain_text",
+          "content": "__CONFIDENCE_TAG__"
+        },
+        "color": "green"
+      }
+    ]
+  },
+  "body": {
+    "direction": "vertical",
+    "vertical_spacing": "medium",
+    "padding": "12px 12px 12px 12px",
+    "elements": [
+      {
+        "tag": "markdown",
+        "element_id": "answer_summary",
+        "content": "**一句话结论**：__SHORT_ANSWER__\n\n<font color='grey'>__DOC_LABEL__：</font><link icon='docx_outlined' url='__DOC_URL__' pc_url='__DOC_URL__' ios_url='__DOC_URL__' android_url='__DOC_URL__'>__DOC_TITLE__</link>",
+        "text_size": "normal",
+        "margin": "0"
+      },
+      {
+        "tag": "button",
+        "element_id": "open_doc_button",
+        "text": {
+          "tag": "plain_text",
+          "content": "__DOC_BUTTON_TEXT__"
+        },
+        "type": "primary",
+        "width": "default",
+        "behaviors": [
+          {
+            "type": "open_url",
+            "default_url": "__DOC_URL__",
+            "pc_url": "__DOC_URL__",
+            "ios_url": "__DOC_URL__",
+            "android_url": "__DOC_URL__"
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "element_id": "answer_fields",
+        "fields": [
+          {
+            "is_short": true,
+            "text": {
+              "tag": "lark_md",
+              "content": "**__PRIMARY_LABEL__**\n__PRIMARY_ANSWER__"
+            }
+          },
+          {
+            "is_short": true,
+            "text": {
+              "tag": "lark_md",
+              "content": "**__SECONDARY_LABEL__**\n__SECONDARY_ANSWER__"
+            }
+          },
+          {
+            "is_short": true,
+            "text": {
+              "tag": "lark_md",
+              "content": "**置信度**\n<font color='green'>__CONFIDENCE__</font>"
+            }
+          },
+          {
+            "is_short": true,
+            "text": {
+              "tag": "lark_md",
+              "content": "**__NEXT_STEP_LABEL__**\n__NEXT_STEP__"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "table",
+        "element_id": "evidence_matrix",
+        "page_size": 5,
+        "row_height": "low",
+        "columns": [
+          {
+            "name": "scene",
+            "display_name": "__SCENE_LABEL__",
+            "data_type": "lark_md",
+            "width": "150px"
+          },
+          {
+            "name": "answer",
+            "display_name": "__ANSWER_LABEL__",
+            "data_type": "lark_md",
+            "width": "180px"
+          },
+          {
+            "name": "evidence",
+            "display_name": "__EVIDENCE_LABEL__",
+            "data_type": "lark_md",
+            "width": "220px"
+          },
+          {
+            "name": "risk",
+            "display_name": "__RISK_LABEL__",
+            "data_type": "lark_md",
+            "width": "160px"
+          }
+        ],
+        "rows": [
+          {
+            "scene": "__SCENE_1__",
+            "answer": "__ANSWER_1__",
+            "evidence": "__EVIDENCE_1__",
+            "risk": "__RISK_1__"
+          },
+          {
+            "scene": "__SCENE_2__",
+            "answer": "__ANSWER_2__",
+            "evidence": "__EVIDENCE_2__",
+            "risk": "__RISK_2__"
+          }
+        ]
+      },
+      {
+        "tag": "collapsible_panel",
+        "element_id": "reasoning_panel",
+        "expanded": false,
+        "header": {
+          "title": {
+            "tag": "markdown",
+            "content": "**__REASONING_TITLE__**"
+          },
+          "background_color": "grey",
+          "padding": "4px 8px 4px 8px",
+          "icon": {
+            "tag": "standard_icon",
+            "token": "down-small-ccm_outlined",
+            "size": "16px 16px"
+          },
+          "icon_position": "right",
+          "icon_expanded_angle": -180
+        },
+        "elements": [
+          {
+            "tag": "markdown",
+            "content": "__REASONING__"
+          }
+        ]
+      },
+      {
+        "tag": "collapsible_panel",
+        "element_id": "troubleshooting_panel",
+        "expanded": false,
+        "header": {
+          "title": {
+            "tag": "markdown",
+            "content": "**__STEPS_TITLE__**"
+          },
+          "background_color": "grey",
+          "padding": "4px 8px 4px 8px",
+          "icon": {
+            "tag": "standard_icon",
+            "token": "down-small-ccm_outlined",
+            "size": "16px 16px"
+          },
+          "icon_position": "right",
+          "icon_expanded_angle": -180
+        },
+        "elements": [
+          {
+            "tag": "markdown",
+            "content": "__TROUBLESHOOTING_STEPS__"
+          }
+        ]
+      },
+      {
+        "tag": "markdown",
+        "element_id": "followup_title",
+        "content": "**继续追问**",
+        "text_size": "normal"
+      },
+      {
+        "tag": "column_set",
+        "element_id": "followup_action_row",
+        "flex_mode": "trisect",
+        "horizontal_spacing": "8px",
+        "columns": [
+          {
+            "tag": "column",
+            "width": "weighted",
+            "weight": 1,
+            "vertical_align": "center",
+            "elements": [
+              {
+                "tag": "button",
+                "element_id": "followup_1",
+                "text": {
+                  "tag": "plain_text",
+                  "content": "__FOLLOW_UP_1_TEXT__"
+                },
+                "type": "primary",
+                "width": "fill",
+                "behaviors": [
+                  {
+                    "type": "callback",
+                    "value": {
+                      "action": "feishu_card.follow_up",
+                      "prompt": "__FOLLOW_UP_1_PROMPT__",
+                      "doc_url": "__DOC_URL__"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "column",
+            "width": "weighted",
+            "weight": 1,
+            "vertical_align": "center",
+            "elements": [
+              {
+                "tag": "button",
+                "element_id": "followup_2",
+                "text": {
+                  "tag": "plain_text",
+                  "content": "__FOLLOW_UP_2_TEXT__"
+                },
+                "type": "default",
+                "width": "fill",
+                "behaviors": [
+                  {
+                    "type": "callback",
+                    "value": {
+                      "action": "feishu_card.follow_up",
+                      "prompt": "__FOLLOW_UP_2_PROMPT__",
+                      "doc_url": "__DOC_URL__"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "column",
+            "width": "weighted",
+            "weight": 1,
+            "vertical_align": "center",
+            "elements": [
+              {
+                "tag": "button",
+                "element_id": "followup_3",
+                "text": {
+                  "tag": "plain_text",
+                  "content": "__FOLLOW_UP_3_TEXT__"
+                },
+                "type": "default",
+                "width": "fill",
+                "behaviors": [
+                  {
+                    "type": "callback",
+                    "value": {
+                      "action": "feishu_card.follow_up",
+                      "prompt": "__FOLLOW_UP_3_PROMPT__",
+                      "doc_url": "__DOC_URL__"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "form",
+        "name": "follow_up_query_form",
+        "element_id": "followup_input_form",
+        "padding": "0px",
+        "margin": "0px",
+        "elements": [
+          {
+            "tag": "markdown",
+            "element_id": "follow_up_query_form_title",
+            "content": "**自由追问**",
+            "text_size": "normal",
+            "margin": "0"
+          },
+          {
+            "tag": "input",
+            "name": "follow_up_query",
+            "element_id": "follow_up_query",
+            "input_type": "multiline_text",
+            "width": "fill",
+            "placeholder": {
+              "tag": "plain_text",
+              "content": "__FOLLOW_UP_INPUT_PLACEHOLDER__"
+            },
+            "required": true,
+            "max_length": 500,
+            "rows": 3
+          },
+          {
+            "tag": "button",
+            "name": "submit_follow_up",
+            "element_id": "submit_follow_up",
+            "text": {
+              "tag": "plain_text",
+              "content": "__FOLLOW_UP_SUBMIT_TEXT__"
+            },
+            "type": "primary",
+            "width": "default",
+            "form_action_type": "submit",
+            "value": {
+              "action": "feishu_card.follow_up_input",
+              "topic": "__TOPIC__",
+              "question": "__QUESTION__",
+              "doc_url": "__DOC_URL__",
+              "input_name": "follow_up_query"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "markdown",
+        "element_id": "answer_footer",
+        "content": "<font color='grey'>__FOOTER__ · 文档创建身份：__DOC_CREATED_AS__</font>",
+        "text_size": "notation"
+      }
+    ]
+  }
+}

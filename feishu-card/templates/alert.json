@@ -1,0 +1,137 @@
+{
+  "schema": "2.0",
+  "config": {
+    "update_multi": true,
+    "enable_forward": true,
+    "width_mode": "fill"
+  },
+  "header": {
+    "template": "red",
+    "title": {
+      "tag": "plain_text",
+      "content": "__ALERT_TITLE__"
+    },
+    "subtitle": {
+      "tag": "plain_text",
+      "content": "__ALERT_SUBTITLE__"
+    },
+    "text_tag_list": [
+      {
+        "tag": "text_tag",
+        "text": {
+          "tag": "plain_text",
+          "content": "__SEVERITY__"
+        },
+        "color": "red"
+      }
+    ]
+  },
+  "body": {
+    "direction": "vertical",
+    "vertical_spacing": "medium",
+    "elements": [
+      {
+        "tag": "markdown",
+        "content": "**Impact:** <font color='red'>__IMPACT__</font>\n\n__DESCRIPTION__"
+      },
+      {
+        "tag": "hr"
+      },
+      {
+        "tag": "div",
+        "fields": [
+          {
+            "is_short": true,
+            "text": {
+              "tag": "lark_md",
+              "content": "**Service**\n__SERVICE__"
+            }
+          },
+          {
+            "is_short": true,
+            "text": {
+              "tag": "lark_md",
+              "content": "**Region**\n__REGION__"
+            }
+          },
+          {
+            "is_short": true,
+            "text": {
+              "tag": "lark_md",
+              "content": "**Started**\n__START_TIME__"
+            }
+          },
+          {
+            "is_short": true,
+            "text": {
+              "tag": "lark_md",
+              "content": "**Owner**\n__ONCALL__"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "markdown",
+        "content": "**Recommended action**\n__RECOMMENDED_ACTION__"
+      },
+      {
+        "tag": "column_set",
+        "flex_mode": "none",
+        "horizontal_spacing": "8px",
+        "columns": [
+          {
+            "tag": "column",
+            "width": "weighted",
+            "weight": 1,
+            "vertical_align": "center",
+            "elements": [
+              {
+                "tag": "button",
+                "text": {
+                  "tag": "plain_text",
+                  "content": "__ACK_TEXT__"
+                },
+                "type": "primary",
+                "width": "fill",
+                "behaviors": [
+                  {
+                    "type": "open_url",
+                    "default_url": "__ACK_URL__"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "column",
+            "width": "weighted",
+            "weight": 1,
+            "vertical_align": "center",
+            "elements": [
+              {
+                "tag": "button",
+                "text": {
+                  "tag": "plain_text",
+                  "content": "__RUNBOOK_TEXT__"
+                },
+                "type": "default",
+                "width": "fill",
+                "behaviors": [
+                  {
+                    "type": "open_url",
+                    "default_url": "__RUNBOOK_URL__"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "markdown",
+        "text_size": "notation",
+        "content": "<font color='grey'>Alert ID: __ALERT_ID__ | Last update: __UPDATED_AT__</font>"
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "ad26828f-b72f-4ca2-91c1-1e9d7de7f309",
+  "path": "feishu-bitable",
+  "path_key": "feishu-bitable",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "import",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}

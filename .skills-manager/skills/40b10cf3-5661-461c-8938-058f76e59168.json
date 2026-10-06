@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "40b10cf3-5661-461c-8938-058f76e59168",
+  "path": "feishu-calendar",
+  "path_key": "feishu-calendar",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "import",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}

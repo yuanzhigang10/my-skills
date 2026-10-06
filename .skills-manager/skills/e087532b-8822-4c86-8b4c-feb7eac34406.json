@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "e087532b-8822-4c86-8b4c-feb7eac34406",
+  "path": "feishu-meegle",
+  "path_key": "feishu-meegle",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "import",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}

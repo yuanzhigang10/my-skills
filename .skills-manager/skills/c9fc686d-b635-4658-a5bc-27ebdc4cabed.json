@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "c9fc686d-b635-4658-a5bc-27ebdc4cabed",
+  "path": "lark-event",
+  "path_key": "lark-event",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "import",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}

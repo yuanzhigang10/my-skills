@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "a39d73a4-3f9f-415e-8add-6c2b84f82b4e",
+  "path": "feishu-lark-parser",
+  "path_key": "feishu-lark-parser",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "import",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}

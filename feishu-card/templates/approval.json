@@ -1,0 +1,208 @@
+{
+  "schema": "2.0",
+  "config": {
+    "update_multi": true,
+    "enable_forward": true,
+    "width_mode": "fill"
+  },
+  "header": {
+    "template": "orange",
+    "title": {
+      "tag": "plain_text",
+      "content": "__APPROVAL_TITLE__"
+    },
+    "subtitle": {
+      "tag": "plain_text",
+      "content": "__APPROVAL_SUBTITLE__"
+    },
+    "text_tag_list": [
+      {
+        "tag": "text_tag",
+        "text": {
+          "tag": "plain_text",
+          "content": "Pending"
+        },
+        "color": "orange"
+      }
+    ]
+  },
+  "body": {
+    "direction": "vertical",
+    "vertical_spacing": "medium",
+    "elements": [
+      {
+        "tag": "markdown",
+        "content": "**Requester:** <person id='__REQUESTER_USER_ID__' show_name=true show_avatar=true></person>\n\n__REQUEST_SUMMARY__"
+      },
+      {
+        "tag": "hr"
+      },
+      {
+        "tag": "div",
+        "fields": [
+          {
+            "is_short": true,
+            "text": {
+              "tag": "lark_md",
+              "content": "**Type**\n__REQUEST_TYPE__"
+            }
+          },
+          {
+            "is_short": true,
+            "text": {
+              "tag": "lark_md",
+              "content": "**Priority**\n<font color='orange'>__PRIORITY__</font>"
+            }
+          },
+          {
+            "is_short": true,
+            "text": {
+              "tag": "lark_md",
+              "content": "**Submitted**\n__SUBMITTED_AT__"
+            }
+          },
+          {
+            "is_short": true,
+            "text": {
+              "tag": "lark_md",
+              "content": "**Due**\n__DUE_AT__"
+            }
+          },
+          {
+            "is_short": false,
+            "text": {
+              "tag": "lark_md",
+              "content": "**Reason**\n__REQUEST_REASON__"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "collapsible_panel",
+        "expanded": false,
+        "header": {
+          "title": {
+            "tag": "markdown",
+            "content": "**Review context**"
+          },
+          "background_color": "grey",
+          "padding": "4px 8px 4px 8px",
+          "icon": {
+            "tag": "standard_icon",
+            "token": "down-small-ccm_outlined",
+            "size": "16px 16px"
+          },
+          "icon_position": "right",
+          "icon_expanded_angle": -180
+        },
+        "elements": [
+          {
+            "tag": "markdown",
+            "content": "- Scope: __SCOPE__\n- Risk: __RISK_NOTE__\n- Attachment: [__ATTACHMENT_NAME__](__ATTACHMENT_URL__)"
+          }
+        ]
+      },
+      {
+        "tag": "column_set",
+        "flex_mode": "none",
+        "horizontal_spacing": "8px",
+        "columns": [
+          {
+            "tag": "column",
+            "width": "weighted",
+            "weight": 1,
+            "vertical_align": "center",
+            "elements": [
+              {
+                "tag": "button",
+                "text": {
+                  "tag": "plain_text",
+                  "content": "__APPROVE_TEXT__"
+                },
+                "type": "primary",
+                "width": "fill",
+                "confirm": {
+                  "title": {
+                    "tag": "plain_text",
+                    "content": "__APPROVE_CONFIRM_TITLE__"
+                  },
+                  "text": {
+                    "tag": "plain_text",
+                    "content": "__APPROVE_CONFIRM_TEXT__"
+                  }
+                },
+                "behaviors": [
+                  {
+                    "type": "open_url",
+                    "default_url": "__APPROVE_URL__"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "column",
+            "width": "weighted",
+            "weight": 1,
+            "vertical_align": "center",
+            "elements": [
+              {
+                "tag": "button",
+                "text": {
+                  "tag": "plain_text",
+                  "content": "__REJECT_TEXT__"
+                },
+                "type": "danger",
+                "width": "fill",
+                "confirm": {
+                  "title": {
+                    "tag": "plain_text",
+                    "content": "__REJECT_CONFIRM_TITLE__"
+                  },
+                  "text": {
+                    "tag": "plain_text",
+                    "content": "__REJECT_CONFIRM_TEXT__"
+                  }
+                },
+                "behaviors": [
+                  {
+                    "type": "open_url",
+                    "default_url": "__REJECT_URL__"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "column",
+            "width": "weighted",
+            "weight": 1,
+            "vertical_align": "center",
+            "elements": [
+              {
+                "tag": "button",
+                "text": {
+                  "tag": "plain_text",
+                  "content": "__OPEN_TEXT__"
+                },
+                "type": "default",
+                "width": "fill",
+                "behaviors": [
+                  {
+                    "type": "open_url",
+                    "default_url": "__APPROVAL_URL__"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "markdown",
+        "text_size": "notation",
+        "content": "<font color='grey'>Approval ID: __APPROVAL_ID__ | Workflow: __WORKFLOW_NAME__</font>"
+      }
+    ]
+  }
+}

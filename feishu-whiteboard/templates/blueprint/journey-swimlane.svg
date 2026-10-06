@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 720" font-family="Noto Sans SC, -apple-system, sans-serif">
+  <rect width="1400" height="720" fill="#fafbfc"/>
+
+  <!-- Title -->
+  <text x="700" y="42" text-anchor="middle" font-size="22" font-weight="700" fill="#1f2937">一条 PRD 的旅程 · 9 动作链路结构示意</text>
+  <text x="700" y="64" text-anchor="middle" font-size="13" fill="#6b7280">Skill 在 PRD → Code → QA 链路上的触达序列 · 待补真实 PRD 案例 + 人日数字</text>
+
+  <!-- Phase axis label band -->
+  <rect x="40" y="92" width="1320" height="28" fill="#1f2937"/>
+  <text x="60" y="111" font-size="11" fill="#fff" font-weight="600" letter-spacing="2">PHASE AXIS · 主轴 8 段（一条直线）</text>
+  <text x="700" y="111" font-size="10" fill="#94a3b8" letter-spacing="1.5">虚线表示该阶段 ⓘ 调用 KNOWLEDGE BUS · 全程可调用 CROSS-CUT</text>
+
+  <!-- ===== Box 1: TRIGGER PRD ===== -->
+  <rect x="40" y="148" width="100" height="120" rx="8" fill="#1f2937" stroke="#0f1f3d"/>
+  <text x="90" y="168" text-anchor="middle" font-size="10" fill="#94a3b8" letter-spacing="0.5">TRIGGER</text>
+  <text x="90" y="194" text-anchor="middle" font-size="20" fill="#fff" font-weight="700">PRD</text>
+  <text x="90" y="216" text-anchor="middle" font-size="10" fill="#cbd5e1">飞书需求文档</text>
+  <text x="90" y="232" text-anchor="middle" font-size="9.5" fill="#94a3b8" font-family="JetBrains Mono, monospace">user input</text>
+  <text x="90" y="254" text-anchor="middle" font-size="9" fill="#64748b" font-style="italic">流程起点</text>
+
+  <line x1="142" y1="208" x2="158" y2="208" stroke="#374151" stroke-width="1.5"/>
+  <polygon points="154,204 164,208 154,212" fill="#374151"/>
+
+  <!-- ===== Box 2: Triage (green) ===== -->
+  <rect x="160" y="148" width="158" height="120" rx="8" fill="#dcf2dc" stroke="#84c184" stroke-width="1.5"/>
+  <circle cx="184" cy="170" r="13" fill="#3a8a3a"/>
+  <text x="184" y="175" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">①</text>
+  <text x="204" y="175" font-size="13" font-weight="700" fill="#1f2937">Triage</text>
+  <text x="172" y="197" font-size="10.5" fill="#3a8a3a" font-weight="500">路由分流</text>
+  <text x="172" y="216" font-size="10" fill="#1f2937" font-family="JetBrains Mono, monospace">promotion-analyzing</text>
+  <text x="172" y="230" font-size="10" fill="#9ca3af" font-family="JetBrains Mono, monospace">content-analyzing</text>
+  <text x="172" y="244" font-size="10" fill="#9ca3af" font-family="JetBrains Mono, monospace">pdp-analyzing</text>
+  <text x="172" y="262" font-size="9.5" fill="#3a8a3a" font-style="italic">→ 子 skill 加载决策</text>
+
+  <line x1="320" y1="208" x2="336" y2="208" stroke="#374151" stroke-width="1.5"/>
+  <polygon points="332,204 342,208 332,212" fill="#374151"/>
+
+  <!-- ===== Box 3: Ctx-Load (peach) ===== -->
+  <rect x="338" y="148" width="158" height="120" rx="8" fill="#fde6dc" stroke="#e89890" stroke-width="1.5"/>
+  <circle cx="362" cy="170" r="13" fill="#c75050"/>
+  <text x="362" y="175" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">②</text>
+  <text x="382" y="175" font-size="13" font-weight="700" fill="#1f2937">Ctx-Load</text>
+  <text x="350" y="197" font-size="10.5" fill="#c75050" font-weight="500">上下文加载</text>
+  <text x="350" y="216" font-size="10" fill="#1f2937" font-family="JetBrains Mono, monospace">gecc-promotion-lib</text>
+  <text x="350" y="230" font-size="10" fill="#9ca3af" font-family="JetBrains Mono, monospace">ec-libs-index</text>
+  <text x="350" y="244" font-size="10" fill="#9ca3af" font-family="JetBrains Mono, monospace">repo-mapping-from-lark</text>
+  <text x="350" y="262" font-size="9.5" fill="#c75050" font-style="italic">→ 已有代码 / 经验</text>
+
+  <line x1="498" y1="208" x2="514" y2="208" stroke="#374151" stroke-width="1.5"/>
+  <polygon points="510,204 520,208 510,212" fill="#374151"/>
+
+  <!-- ===== Box 4: Req (yellow) ===== -->
+  <rect x="516" y="148" width="158" height="120" rx="8" fill="#fdf3cb" stroke="#d4b850" stroke-width="1.5"/>
+  <circle cx="540" cy="170" r="13" fill="#a07c20"/>
+  <text x="540" y="175" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">③</text>
+  <text x="560" y="175" font-size="13" font-weight="700" fill="#1f2937">Req</text>
+  <text x="528" y="197" font-size="10.5" fill="#a07c20" font-weight="500">需求摄入</text>
+  <text x="528" y="216" font-size="10" fill="#1f2937" font-family="JetBrains Mono, monospace">prd-user-flow-generator</text>
+  <text x="528" y="230" font-size="10" fill="#9ca3af" font-family="JetBrains Mono, monospace">activity-ux</text>
+  <text x="528" y="244" font-size="10" fill="#9ca3af" font-family="JetBrains Mono, monospace">activity-requirements</text>
+  <text x="528" y="262" font-size="9.5" fill="#a07c20" font-style="italic">→ user-flow / UX onepager</text>
+
+  <line x1="676" y1="208" x2="692" y2="208" stroke="#374151" stroke-width="1.5"/>
+  <polygon points="688,204 698,208 688,212" fill="#374151"/>
+
+  <!-- ===== Box 5: Design (yellow, has consult) ===== -->
+  <rect x="694" y="148" width="158" height="120" rx="8" fill="#fdf3cb" stroke="#d4b850" stroke-width="1.5"/>
+  <circle cx="718" cy="170" r="13" fill="#a07c20"/>
+  <text x="718" y="175" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">④</text>
+  <text x="738" y="175" font-size="13" font-weight="700" fill="#1f2937">Design</text>
+  <text x="706" y="197" font-size="10.5" fill="#a07c20" font-weight="500">技术设计 ⓘ</text>
+  <text x="706" y="216" font-size="10" fill="#1f2937" font-family="JetBrains Mono, monospace">prd-to-td-fe-domain</text>
+  <text x="706" y="230" font-size="10" fill="#9ca3af" font-family="JetBrains Mono, monospace">prd-to-td-bff-domain</text>
+  <text x="706" y="244" font-size="10" fill="#9ca3af" font-family="JetBrains Mono, monospace">td-html-format · idl-first</text>
+  <text x="706" y="262" font-size="9.5" fill="#a07c20" font-style="italic">→ TD 文档 / IDL 契约</text>
+
+  <line x1="854" y1="208" x2="870" y2="208" stroke="#374151" stroke-width="1.5"/>
+  <polygon points="866,204 876,208 866,212" fill="#374151"/>
+
+  <!-- ===== Box 6: Codegen (yellow, has consult) ===== -->
+  <rect x="872" y="148" width="158" height="120" rx="8" fill="#fdf3cb" stroke="#d4b850" stroke-width="1.5"/>
+  <circle cx="896" cy="170" r="13" fill="#a07c20"/>
+  <text x="896" y="175" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">⑤</text>
+  <text x="916" y="175" font-size="13" font-weight="700" fill="#1f2937">Codegen</text>
+  <text x="884" y="197" font-size="10.5" fill="#a07c20" font-weight="500">代码生成 ⓘ</text>
+  <text x="884" y="216" font-size="10" fill="#1f2937" font-family="JetBrains Mono, monospace">lynx-ui-component-builder</text>
+  <text x="884" y="230" font-size="10" fill="#9ca3af" font-family="JetBrains Mono, monospace">activity-codegen</text>
+  <text x="884" y="244" font-size="10" fill="#9ca3af" font-family="JetBrains Mono, monospace">h5-to-lynx-converter</text>
+  <text x="884" y="262" font-size="9.5" fill="#a07c20" font-style="italic">→ 代码 diff</text>
+
+  <line x1="1032" y1="208" x2="1048" y2="208" stroke="#374151" stroke-width="1.5"/>
+  <polygon points="1044,204 1054,208 1044,212" fill="#374151"/>
+
+  <!-- ===== Box 7: Verify (yellow) ===== -->
+  <rect x="1050" y="148" width="158" height="120" rx="8" fill="#fdf3cb" stroke="#d4b850" stroke-width="1.5"/>
+  <circle cx="1074" cy="170" r="13" fill="#a07c20"/>
+  <text x="1074" y="175" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">⑥</text>
+  <text x="1094" y="175" font-size="13" font-weight="700" fill="#1f2937">Verify</text>
+  <text x="1062" y="197" font-size="10.5" fill="#a07c20" font-weight="500">自验交付</text>
+  <text x="1062" y="216" font-size="10" fill="#1f2937" font-family="JetBrains Mono, monospace">lynx-self-verify</text>
+  <text x="1062" y="230" font-size="10" fill="#9ca3af" font-family="JetBrains Mono, monospace">pre-qa-self-test</text>
+  <text x="1062" y="244" font-size="10" fill="#9ca3af" font-family="JetBrains Mono, monospace">activity-tsc · activity-e2e</text>
+  <text x="1062" y="262" font-size="9.5" fill="#a07c20" font-style="italic">→ QA handoff report</text>
+
+  <line x1="1210" y1="208" x2="1226" y2="208" stroke="#374151" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="1222,204 1232,208 1222,212" fill="#374151"/>
+
+  <!-- ===== Box 8: PROD ===== -->
+  <rect x="1230" y="148" width="130" height="120" rx="8" fill="#1b5e20" stroke="#0d3d12"/>
+  <text x="1295" y="168" text-anchor="middle" font-size="10" fill="#a5d6a7" letter-spacing="0.5">PROD</text>
+  <text x="1295" y="194" text-anchor="middle" font-size="20" fill="#fff" font-weight="700">上线</text>
+  <text x="1295" y="216" text-anchor="middle" font-size="10" fill="#c8e6c9">Hand off → QA</text>
+  <text x="1295" y="232" text-anchor="middle" font-size="9.5" fill="#a5d6a7" font-family="JetBrains Mono, monospace">prod release</text>
+  <text x="1295" y="254" text-anchor="middle" font-size="9" fill="#a5d6a7" font-style="italic">流程终点</text>
+
+  <!-- ============== Knowledge Bus (consulted layer) ============== -->
+  <rect x="40" y="316" width="1320" height="28" fill="#a07c20"/>
+  <text x="60" y="335" font-size="11" fill="#fff" font-weight="600" letter-spacing="2">KNOWLEDGE BUS · 知识总线 · 被 ④ Design + ⑤ Codegen 共享调用</text>
+
+  <rect x="40" y="356" width="640" height="100" rx="8" fill="#fdf3cb" stroke="#d4b850" stroke-width="1.5"/>
+  <text x="56" y="378" font-size="10.5" fill="#a07c20" font-weight="600" letter-spacing="0.5">DOMAIN-KB · 业务专家</text>
+  <text x="56" y="398" font-size="11" fill="#1f2937" font-family="JetBrains Mono, monospace">lynx-expert · hava-expert · patom-flow-expert</text>
+  <text x="56" y="414" font-size="11" fill="#1f2937" font-family="JetBrains Mono, monospace">tracking-expert · pdp-action-chain · pdp-goda-tracking</text>
+  <text x="56" y="432" font-size="10" fill="#6b7280">回答："这个业务在仓库里长什么样？数据怎么流？埋点怎么打？"</text>
+  <text x="56" y="448" font-size="9.5" fill="#9ca3af" font-style="italic">业务变 → 它要改</text>
+
+  <rect x="720" y="356" width="640" height="100" rx="8" fill="#fdf3cb" stroke="#d4b850" stroke-width="1.5"/>
+  <text x="736" y="378" font-size="10.5" fill="#a07c20" font-weight="600" letter-spacing="0.5">PLATFORM-KB · 平台专家</text>
+  <text x="736" y="398" font-size="11" fill="#1f2937" font-family="JetBrains Mono, monospace">hertz · kitex · gec-thrift-idl · overpass</text>
+  <text x="736" y="414" font-size="11" fill="#1f2937" font-family="JetBrains Mono, monospace">middleware-* (×6) · kms · libra · metrics · neptune</text>
+  <text x="736" y="432" font-size="10" fill="#6b7280">回答："这个公司基建怎么用？接口怎么写？怎么排障？"</text>
+  <text x="736" y="448" font-size="9.5" fill="#9ca3af" font-style="italic">业务变 → 它不改（公司公共资产）</text>
+
+  <!-- Consult arrows (dashed, going up to phases 5 and 6) -->
+  <line x1="360" y1="356" x2="773" y2="272" stroke="#d4b850" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="360" y1="356" x2="951" y2="272" stroke="#d4b850" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="1040" y1="356" x2="773" y2="272" stroke="#d4b850" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="1040" y1="356" x2="951" y2="272" stroke="#d4b850" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <!-- ============== Cross-cut layer ============== -->
+  <rect x="40" y="480" width="1320" height="28" fill="#4862a8"/>
+  <text x="60" y="499" font-size="11" fill="#fff" font-weight="600" letter-spacing="2">CROSS-CUT · 横切基建 · 全程可调用</text>
+
+  <rect x="40" y="520" width="1320" height="64" rx="8" fill="#e0e8f7" stroke="#7e96d4" stroke-width="1.5"/>
+  <text x="56" y="542" font-size="10.5" fill="#4862a8" font-weight="600" letter-spacing="0.5">CROSS-CUT TOOLS · 横切层小工具</text>
+  <text x="56" y="562" font-size="11" fill="#1f2937" font-family="JetBrains Mono, monospace">lark-docs-access · lark-rich-doc · diagram-design · lark-docs2md · rds · user_jwt · tcc-query</text>
+  <text x="56" y="578" font-size="9.5" fill="#9ca3af" font-style="italic">不属于流程任一阶段 · 但每阶段都可能调用 · 例：写 TD 时调 lark-docs-access 读飞书原文，写代码时调 rds 查线上 schema</text>
+
+  <!-- Footer -->
+  <text x="40" y="624" font-size="11" font-weight="600" fill="#1f2937">如何替换为真实数据</text>
+  <text x="40" y="644" font-size="10" fill="#374151">在每个阶段框内补：① 实际触发的 skill 名（替换示例）　② 该阶段平均耗时（手写 vs AI Native）　③ 人工介入次数　→ 形成"AI Native 实证"叙事</text>
+  <text x="40" y="666" font-size="10" fill="#6b7280" font-style="italic">布局调整：8 段全部一条直线（PRD → Triage → Ctx-Load → Req → Design → Codegen → Verify → 上线）</text>
+</svg>

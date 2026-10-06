@@ -1,0 +1,85 @@
+{
+  "schema": "2.0",
+  "config": {
+    "update_multi": true,
+    "enable_forward": true,
+    "width_mode": "fill"
+  },
+  "header": {
+    "template": "blue",
+    "title": {
+      "tag": "plain_text",
+      "content": "__TITLE__"
+    },
+    "subtitle": {
+      "tag": "plain_text",
+      "content": "__SUBTITLE__"
+    }
+  },
+  "body": {
+    "direction": "vertical",
+    "vertical_spacing": "medium",
+    "elements": [
+      {
+        "tag": "markdown",
+        "content": "**__LEAD_TEXT__**\n\n__MESSAGE__"
+      },
+      {
+        "tag": "hr"
+      },
+      {
+        "tag": "div",
+        "fields": [
+          {
+            "is_short": true,
+            "text": {
+              "tag": "lark_md",
+              "content": "**Owner**\n__OWNER__"
+            }
+          },
+          {
+            "is_short": true,
+            "text": {
+              "tag": "lark_md",
+              "content": "**Time**\n__TIME__"
+            }
+          },
+          {
+            "is_short": true,
+            "text": {
+              "tag": "lark_md",
+              "content": "**Source**\n__SOURCE__"
+            }
+          },
+          {
+            "is_short": true,
+            "text": {
+              "tag": "lark_md",
+              "content": "**Status**\n<font color='blue'>__STATUS__</font>"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "button",
+        "text": {
+          "tag": "plain_text",
+          "content": "__ACTION_TEXT__"
+        },
+        "type": "primary",
+        "width": "default",
+        "behaviors": [
+          {
+            "type": "open_url",
+            "default_url": "__ACTION_URL__"
+          }
+        ]
+      },
+      {
+        "tag": "markdown",
+        "text_size": "notation",
+        "content": "<font color='grey'>Message ID: __MESSAGE_ID__</font>"
+      }
+    ]
+  }
+}
