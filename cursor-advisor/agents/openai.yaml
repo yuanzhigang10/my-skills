@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cursor Advisor"
+  short_description: "Read-only Opus and Argon reviews via Cursor CLI"
+  default_prompt: "Use $cursor-advisor to get a read-only second opinion on this task."

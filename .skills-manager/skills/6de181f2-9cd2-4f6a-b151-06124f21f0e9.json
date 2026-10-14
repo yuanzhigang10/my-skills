@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "6de181f2-9cd2-4f6a-b151-06124f21f0e9",
+  "path": "cursor-advisor",
+  "path_key": "cursor-advisor",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "local",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}
